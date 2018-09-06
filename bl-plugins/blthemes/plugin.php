@@ -62,7 +62,7 @@ class pluginBlThemes extends Plugin {
         $jsonFile = PATH_UPLOADS.'search.json';
         if (file_exists($jsonFile))  @unlink($jsonFile);
         $json = new dbJSON($jsonFile,false);
-		
+
 		foreach($list as $key => $page) {
 			try {
                 $item=array();
