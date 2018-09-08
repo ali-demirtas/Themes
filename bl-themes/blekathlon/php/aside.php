@@ -14,16 +14,16 @@
                     <h3><?php echo $L->get('Latest posts'); ?></h3>
                     <ul class="menu">
                         <?php
-                       
-                        $listOfKeys = $pages->getList(1,4);
-                       
-                        if($listOfKeys):
-                            foreach ($listOfKeys as $key):
-                                $lPage = new Page($key);
+
+                        $listOfKeys = $pages->getList(1, 4);
+
+                        if ($listOfKeys) :
+                            foreach ($listOfKeys as $key) :
+                            $lPage = new Page($key);
                         ?>
                         <li class="menu-item">
                             <a href="<?php echo $lPage->permalink() ?>">
-                                <?php echo $lPage->title()  ?>
+                                <?php echo $lPage->title() ?>
                             </a>
                         </li>
                         <?php endforeach ?>
@@ -36,7 +36,7 @@
                 <section class="widget widget_nav_menu">
 					<h3><?php echo $L->get('Pages'); ?></h3>
                     <ul class="menu">
-                        <?php foreach ($staticContent as $staticPage): ?>
+                        <?php foreach ($staticContent as $staticPage) : ?>
                         <li class="menu-item">
                             <a href="<?php echo $staticPage->permalink(); ?>">
                                 <?php echo $staticPage->title(); ?>
@@ -51,7 +51,7 @@
                 <div class="social-menu-wrapper clear">
                     <ul class="menu-social-items">
                         <!-- Social Networks -->
-                        <?php if ($site->github()): ?>
+                        <?php if ($site->github()) : ?>
                         <li class="menu-item">
                             <a class="nav-link" href="<?php echo $site->github() ?>" target="_blank">
                                 <span class="screen-reader-text">Github</span>
@@ -62,7 +62,7 @@
                         </li>
                         <?php endif ?>
 
-                        <?php if ($site->twitter()): ?>
+                        <?php if ($site->twitter()) : ?>
                         <li class="menu-item">
                             <a class="nav-link" href="<?php echo $site->twitter() ?>" target="_blank">
                                 <span class="screen-reader-text">Twitter</span>
@@ -73,7 +73,7 @@
                         </li>
                         <?php endif ?>
 
-                        <?php if ($site->facebook()): ?>
+                        <?php if ($site->facebook()) : ?>
                         <li class="menu-item">
                             <a class="nav-link" href="<?php echo $site->facebook() ?>" target="_blank">
                                 <span class="screen-reader-text">Facebook</span>
@@ -84,7 +84,7 @@
                         </li>
                         <?php endif ?>
 
-                        <?php if ($site->googleplus()): ?>
+                        <?php if ($site->googleplus()) : ?>
                         <li class="menu-item">
                             <a class="nav-link" href="<?php echo $site->googleplus() ?>" target="_blank">
                                 <span class="screen-reader-text">Google +</span>
@@ -95,7 +95,7 @@
                         </li>
                         <?php endif ?>
 
-                        <?php if ($site->codepen()): ?>
+                        <?php if ($site->codepen()) : ?>
                         <li class="menu-item">
                             <a class="nav-link" href="<?php echo $site->codepen() ?>" target="_blank">
                                 <span class="screen-reader-text">Codepen</span>
@@ -106,7 +106,7 @@
                         </li>
                         <?php endif ?>
 
-                        <?php if ($site->linkedin()): ?>
+                        <?php if ($site->linkedin()) : ?>
                         <li class="menu-item">
                             <a class="nav-link" href="<?php echo $site->linkedin() ?>" target="_blank">
                                 <span class="screen-reader-text">LinkedIn</span>
@@ -117,7 +117,7 @@
                         </li>
                         <?php endif ?>
 
-						<?php if ($site->instagram()): ?>
+						<?php if ($site->instagram()) : ?>
                         <li class="menu-item">
                             <a class="nav-link" href="<?php echo $site->instagram() ?>" target="_blank">
                                 <span class="screen-reader-text">Instagram</span>
